@@ -1,12 +1,13 @@
 package se.lexicon;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        ex0();
+        ex1();
 
     }
 
@@ -22,4 +23,15 @@ public class Main {
         newArray[newLength] = letter;
         return newArray;
     }
+
+    public static void ex1(){
+        ArrayList<Integer> numbers = new ArrayList<>();
+        numbers.add(100);
+        numbers.add(300);
+        numbers.add(200);
+        numbers.add(700);
+        numbers.add(500);
+        System.out.println(numbers);
+    }
+
 }
