@@ -8,7 +8,7 @@ import java.util.Iterator;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        ex1();
+        ex2();
 
     }
 
@@ -50,7 +50,6 @@ public class Main {
             }
         }
 
-
         System.out.println("-----for print out, not modify -----");
         for (Integer number : numbers) {
             if (number == 200){
@@ -59,7 +58,22 @@ public class Main {
             System.out.println(number);
         }
 
-
     }
+    public static void ex2(){
+        ArrayList<Integer> numbers = new ArrayList<>();
+        numbers.add(100);
+        numbers.add(300);
+        numbers.add(200);
+        numbers.add(100);
+        numbers.add(500);
+
+        Integer isRemoved = numbers.remove(3);
+        System.out.println(isRemoved);
+        System.out.println(numbers);
+
+        int[] a = {1,2,3,4,5,6,7,8,9};
+        System.out.println(Arrays.toString(a));
+    }
+
 
 }
