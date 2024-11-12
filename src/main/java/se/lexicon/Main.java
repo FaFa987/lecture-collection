@@ -3,12 +3,13 @@ package se.lexicon;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
+import java.util.List;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        ex2();
+        ex3();
 
     }
 
@@ -83,6 +84,30 @@ public class Main {
         for(int i = 0 ; i < numbers.size() ; i++){
             System.out.println(numbers.get(1));
         }
+    }
+
+    public static void ex3(){
+        List<String> cars = new ArrayList<>();
+        cars.add("BMW");
+        cars.add("Toyota");
+        cars.add("Benz");
+
+        List<String> cars2 = new ArrayList<>();
+        cars.add("Volvo");
+        cars.add("hyundai");
+
+        cars.addAll(cars2);
+
+        System.out.println(cars);
+        for (String car : cars) {
+            System.out.println(car);
+        }
+
+        System.out.println("cars.indexOf(\"Toyota\") = " + cars.indexOf("Toyota"));
+        System.out.println("cars = " + cars.lastIndexOf("Volvo"));
+        System.out.println("cars = " + cars.indexOf(2));
+
+
     }
 
 
