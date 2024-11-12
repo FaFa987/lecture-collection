@@ -1,12 +1,14 @@
 package se.lexicon;
 
+import se.lexicon.model.Person;
+
 import java.util.*;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        ex5();
+        ex6();
 
     }
 
@@ -143,6 +145,25 @@ public class Main {
         Collections.sort(letters);
         System.out.println(letters);
 
+    }
+    public static void ex6(){
+        String test1 = "Test";
+        String test2 = "Test";
+        boolean compareSring = test1.equals(test2);
+        System.out.println("compareSring = " + compareSring);
+
+        System.out.println(test1.hashCode());
+        System.out.println(test2.hashCode());
+        System.out.println("test".hashCode());
+        System.out.println("TEST".hashCode());
+        System.out.println("Test".hashCode());
+
+        Person p1 = new Person(1, "Fafa", "kh", "fafa@gmail");
+        Person p2 = new Person(1, "Fafa", "kh", "fafa@gmail");
+        boolean isEqual = p1.equals(p2);
+        System.out.println("isEqual = " + isEqual);
+        System.out.println(p1.hashCode());
+        System.out.println(p2.hashCode());
     }
 
 

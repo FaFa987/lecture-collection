@@ -1,5 +1,7 @@
 package se.lexicon.model;
 
+import java.util.Objects;
+
 public class Person {
     private int id;
     private String firstName;
@@ -44,6 +46,26 @@ public class Person {
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
+    }
+
+    /*@Override
+    public boolean equals(Object o) {
+        Person person = (Person) o;
+        //return id == person.id && email.equals(person.email);
+        return Objects.equals(getId(), person.getId());
+    }*/
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return id == person.id && Objects.equals(email, person.email);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, email);
     }
 
     @Override
