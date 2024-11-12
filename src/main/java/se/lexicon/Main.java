@@ -1,15 +1,12 @@
 package se.lexicon;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        ex3();
+        ex5();
 
     }
 
@@ -107,6 +104,44 @@ public class Main {
         System.out.println("cars = " + cars.lastIndexOf("Volvo"));
         System.out.println("cars = " + cars.indexOf(2));
 
+    }
+    public static void ex4(){
+        List<String> originList = new ArrayList<>();
+        originList.add("C");
+        originList.add("B");
+        originList.add("a");
+        originList.add("A");
+        originList.add("D");
+
+        List<String> referenceList = originList;
+        System.out.println(referenceList);
+        originList.remove(0);
+        //ArrayList<String> copyList = originList.clone
+
+        System.out.println("referenceList.size() = " + referenceList.size());
+        System.out.println("originList = " + originList.size());
+    }
+    public static void ex5(){
+        ArrayList<Integer> numbers = new ArrayList<>();
+        numbers.add(8);
+        numbers.add(3);
+        numbers.add(5);
+        numbers.add(9);
+        numbers.add(4);
+
+        //numbers.sort(null);
+        numbers.sort(Collections.reverseOrder());
+        System.out.println(numbers);
+
+        List<String> letters = new ArrayList<>();
+        letters.add("C");
+        letters.add("B");
+        letters.add("a");
+        letters.add("A");
+        letters.add("D");
+        //letters.sort(Collections.reverseOrder());
+        Collections.sort(letters);
+        System.out.println(letters);
 
     }
 
