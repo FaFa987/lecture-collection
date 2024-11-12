@@ -67,12 +67,22 @@ public class Main {
         numbers.add(100);
         numbers.add(500);
 
-        Integer isRemoved = numbers.remove(3);
+        //Integer isRemoved = numbers.remove(3);
+        boolean isRemoved = numbers.remove(Integer.valueOf(502));
         System.out.println(isRemoved);
         System.out.println(numbers);
 
         int[] a = {1,2,3,4,5,6,7,8,9};
         System.out.println(Arrays.toString(a));
+
+        System.out.println("------print with Enhanced for loop-------");
+        for (Integer number : numbers) {
+            System.out.println(number);
+        }
+        System.out.println("------print with Index based for loop-------");
+        for(int i = 0 ; i < numbers.size() ; i++){
+            System.out.println(numbers.get(1));
+        }
     }
 
 
