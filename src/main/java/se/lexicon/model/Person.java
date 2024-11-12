@@ -2,7 +2,7 @@ package se.lexicon.model;
 
 import java.util.Objects;
 
-public class Person {
+public class Person implements Comparable<Person> {
     private int id;
     private String firstName;
     private String lastName;
@@ -76,5 +76,12 @@ public class Person {
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Person o) {
+        if(id > o.getId()) return 1;
+        if(id < o.getId()) return -1;
+        return 0;
     }
 }

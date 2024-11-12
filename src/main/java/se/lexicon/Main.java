@@ -8,7 +8,7 @@ import java.util.*;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        ex6();
+        ex7();
 
     }
 
@@ -164,6 +164,24 @@ public class Main {
         System.out.println("isEqual = " + isEqual);
         System.out.println(p1.hashCode());
         System.out.println(p2.hashCode());
+    }
+    public static void ex7(){
+        ArrayList<Person> persons = new ArrayList<>();
+        Person p1 = new Person(1, "Fafa", "kh", "fafa@gmail");
+        Person p2 = new Person(3, "Ali", "fazeli", "ali@gmail");
+        Person p3 = new Person(2, "Hossein", "shari", "hos@gmail");
+        persons.add(p1);
+        persons.add(p2);
+        persons.add(p3);
+        System.out.println(persons.size());
+        //System.out.println(persons);
+        Collections.sort(persons);
+        System.out.println("------Horizontal print-------");
+        for (Person person : persons) {
+            System.out.println(person);
+        }
+        persons.sort(Collections.reverseOrder());
+
     }
 
 
